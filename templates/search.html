@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Search for Rides
+{% endblock %}
+
+{% block main %}
+
+<div>
+  <form class="row g-1 d-flex align-items-end needs-validation" id="searchform" novalidate>
+    <div class="col-md-3 mb-1 align-top">
+      <label for="starting" class="form-label">Starting Location</label>
+      <select class="form-select mb-3" aria-label=".form-select-lg example" id="starting" required>
+        <option selected value="" disabled>Select a Starting Point</option>
+        <option value="OHare">O'Hare</option>
+        <option value="Midway">Midway</option>
+        <option value="Notre Dame Campus">Notre Dame Campus</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a location.
+      </div>
+    </div>
+    <div class="col-md-3 mb-1 align-top">
+      <label for="departure-datetime" class="form-label">Planned departure time</label>
+      <input type="datetime-local" class="form-select mb-3" id="departure-datetime" required>
+      <div class="invalid-feedback">
+        Please enter a valid time.
+      </div>
+    </div>
+    <div class="col-md-3 mb-1 align-top">
+      <label for="destination" class="form-label">Starting Location</label>
+      <select class="form-select mb-3" aria-label=".form-select-lg example" id="destination" required>
+        <option selected value="" disabled>Select a Destination</option>
+        <option value="OHare">O'Hare</option>
+        <option value="Midway">Midway</option>
+        <option value="Notre Dame Campus">Notre Dame Campus</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a location.
+      </div>
+    </div>
+    <div class="col-md-3 mb-1 align-top">
+      <button class="btn btn-primary align-top" type="submit" id="button">Search</button>
+    </div>
+  </form>
+
+
+</div>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Capacity</th>
+      <th scope="col">Leaving From</th>
+      <th scope="col">Departure Time</th>
+      <th scope="col">Destination</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<script src="/static/search.js"></script>
+{% endblock %}

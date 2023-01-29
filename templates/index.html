@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block main %}
+<main>
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/static/chicago_background.jpg" class="d-block mx-lg-auto img-fluid" alt="Chicago flight background"
+          width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Coordinate a Trip to and from Campus</h1>
+        <p class="lead">Find other students planning similar trips and share rides with them.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="/plan" class="btn btn-lg btn-secondary fw-bold border-white bg-dark text-white px-4 me-md-2">Plan a Trip</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+{% endblock %}

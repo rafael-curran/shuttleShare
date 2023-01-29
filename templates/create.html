@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+New Ride
+{% endblock %}
+
+{% block main %}
+<div class="py-5 text-center">
+  <h2>Create a New Ride</h2>
+  <p class="lead">Fill out the below form to create a new ride. As the creator of this new ride, you will be the person responsible for calling the rideshare itself. All other riders are responsible for reimbursing you for their share of the trip.</p>
+</div>
+<div class="container">
+  <div class="col-md-7 col-lg-8">
+    <form action="/create" method="post">
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="starting" class="form-label">Departing From:</label>
+        </div>
+        <div class="col-sm-6">
+          <select class="form-select mb-3" aria-label=".form-select-lg example" name="starting" required>
+            <option selected="" disabled>Select a Starting Point</option>
+            <option value="OHare">O'Hare</option>
+            <option value="Midway">Midway</option>
+            <option value="Notre Dame Campus">Notre Dame Campus</option>
+          </select>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="starting" class="form-label">Destination:</label>
+        </div>
+        <div class="col-sm-6">
+          <select class="form-select mb-3" aria-label=".form-select-lg example" name="destination" required>
+            <option selected="" disabled>Select a Destination</option>
+            <option value="OHare">O'Hare</option>
+            <option value="Midway">Midway</option>
+            <option value="Notre Dame Campus">Notre Dame Campus</option>
+          </select>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="departure-datetime" class="form-label">Planned departure time:</label>
+        </div>
+        <div class="col-sm-6">
+          <input type="datetime-local" class="form-select mb-3" name="departure-datetime" required>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="size" class="form-label">Rideshare Size:</label>
+        </div>
+        <div class="col-sm-6">
+          <select class="form-select mb-3" aria-label=".form-select-lg example" name="size" required>
+            <option selected="" disabled>Select a Rideshare Size</option>
+            <option value="4">Standard (4 person capacity)</option>
+            <option value="6">X-Large (6 person capacity)</option>
+          </select>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-sm-6">
+        </div>
+        <div class="col-sm-6">
+          <button class="btn btn-primary" type="submit">Create</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+</div>
+{% endblock %}
